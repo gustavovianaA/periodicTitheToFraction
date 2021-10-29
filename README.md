@@ -17,4 +17,4 @@ On the root of the project type
 If you want to compute the thites 0.3939... + 0.123123...
 <br>Type: 0.3939 + 0.123123
 
-<img src="example.html" />
+<img src="example.png" />
