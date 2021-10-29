@@ -1,7 +1,7 @@
 <?php
-include_once('Fraction.php');
-include_once('Operation.php');
-include_once('constants.php');
+include_once('classes/Fraction.php');
+include_once('classes/Operation.php');
+include_once('config/constants.php');
 
 $number1 = $argv[1] ?? null;
 $operation = $argv[2] ?? null;
@@ -25,10 +25,10 @@ print_r($resultingFraction);
 
 $computingExpression = '$$' . $number1 . $operation . $number2 . ' = ' . $n1['latexFraction'] . ' + ' . $n2['latexFraction'] . ' = ' . $resultingFraction->latexFraction() . ' $$'; 
 
-$interfaceFile = fopen('computations.html', 'w');
+$interfaceFile = fopen('output/computations.html', 'w');
 fwrite($interfaceFile, MATHJAX . $n1['equality'] . $n2['equality'] . $computingExpression);
 fclose($interfaceFile);
 
-exec("firefox computations.html");
+exec("firefox output/computations.html");
 
 
